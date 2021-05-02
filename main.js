@@ -96,9 +96,11 @@ copyEl.addEventListener("click", () => {
     return;
   }
 
+  //creating a textarea and assign password as it value for copying after copying is done the text area is removed.
   textarea.value = password;
   document.body.appendChild(textarea);
   textarea.select();
+  // command for copy
   document.execCommand("copy");
   textarea.remove();
   alert("Password copied to clipboard");
